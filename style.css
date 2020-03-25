@@ -1,0 +1,195 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    background-color: #fff;
+}
+
+.saving-calculator {
+    width: auto;
+    position: absolute;
+    align-items: center;
+}
+.container {
+    width: auto;
+    align-items: center;
+    padding: 30px;
+}
+
+.element {
+    position:fixed; 
+    top: 40%;
+    right: 5%;
+    color: white;
+    background-color: cadetblue;
+    padding: 30px;
+
+}
+.col-left {
+  border-right : 1px solid #ddd;
+  width: 60%;
+  padding: 50px;
+}
+
+.col-right {
+    border-right : 1px solid #ddd;
+  }
+
+.row{
+    display: flex;
+    padding: 30px;
+}
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: auto; /* Full-width */
+    height: 5px; /* Specified height */
+    background: #fff278; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    margin: 30px;
+    
+  }
+
+  .slide {
+      background-color: #f7f7f7;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    background: rgb(255, 208, 20); /* Sunpark yellow background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 50%;
+    border-color: cornsilk;
+  } 
+
+.cal-title{
+  margin-bottom: 50px;
+}
+span.irs-max, .irs-single, .irs-min {
+    display: none;
+}
+
+input#slider1, #slider2, #slider3, #slider4, #slider5, #slider6, #slider7 {
+    width: 60%;
+    height: 5px;
+    text-align: center;
+    /* display: inherit; */
+    border-radius: 3px;
+    border: 1px solid #f5f5f5;
+    margin-top: 15px;
+}
+
+.resultContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.result-headline {
+  font-size: 30px;
+  margin-left: 60px;
+}
+
+.result-price p strong {
+  display: block;
+  font-size: 45px;
+  color : #f8f8f8;
+}
+.result {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 40px; 
+  padding-left: 0px;
+  padding-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: #3d3d3d;
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.result-item {
+  background-color: rgb(255, 208, 20);
+  border-radius: 5px;
+  padding: 30px;
+  margin: 15px;
+}
+.cost{
+  background-image: url('https://16iww818esurj9dm316uitwf-wpengine.netdna-ssl.com/wp-content/uploads/2016/10/icn-cost-savings.png');
+}
+.hours{
+    background-image: url(https://16iww818esurj9dm316uitwf-wpengine.netdna-ssl.com/wp-content/uploads/2016/10/icn-time-savings.png);
+}
+.ROI{
+    background-image: url(https://16iww818esurj9dm316uitwf-wpengine.netdna-ssl.com/wp-content/uploads/2016/10/icn-time-savings.png);
+}
+
+.slide span{
+  font-size: 18px;
+}
+.pdf img{
+  position: absolute;
+  max-width: 72px;
+  left:0;
+}
+.pdf{
+  position: relative;
+  padding-left: 100px;
+  margin: 0 95px;
+  
+}
+.irs-bar {
+    height: 8px;
+    top: 25px;
+    background-position: 0 -60px;
+    background: #73b680;
+}
+.irs-slider.state_hover, .irs-slider:hover {
+    background-position: 0 -120px;
+    cursor: pointer;
+    -webkit-transform:scale(1.2) ;
+    transform:scale(1.2) ;
+}
+.pdf .btn-warning {
+    color: #fff;
+    background-color: #53b577;
+    border-color: #53b577;
+    width: 280px;
+    height: 50px;
+    font-weight: 700;
+}
+
+.pdf .btn-warning:hover {
+    color: #fff;
+    background-color: #40955f;
+    border-color: #40955f;
+}
+span.bottom{
+    font-size: 12px;
+    color: #99a3aa;
+    display: inline;
+    padding: 5px 0 0 17px;
+}
+.pdf p {
+    margin-bottom: 20px;
+    font-weight: 300;
+}

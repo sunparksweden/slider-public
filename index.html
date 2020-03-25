@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <LINK href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <section class="saving-calculator">
+        <div class="container">
+            <div class="row">
+
+
+                <!-- Calcutor slide-->
+                <div class="col-left">
+                    <h3 class="cal-title">Kika hur kostnadsläget kan se ut för dig! Dra i reglagen för att anpassa.
+                    </h3>
+
+                    <p>Om huset:</p>
+
+                    <div class="slide">
+                        <div class="col-md-9">
+                            <span>1. Tillgänglig takyta i samma väderstreck (vi utgår ifrån ca. 45 graders
+                                taklutning):  <strong> <span id="value1">1</span> </strong>  kvm.</span>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="range" min="0" max="160" value="1" step="1" class="slider" id="slider1" />
+                            <!-- <p>Antal kvadratmeter: <span id="value1">1</span></p> -->
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="col-md-9">
+                            <span>2. Husets orientering / väderstreck: <strong><span id="value2">Platt</span> </strong> </span>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="range" min="0" max="4" value="0" class="slider" id="slider2" />
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="col-md-9">
+                            <span>3. Kostnad per kWh (Energimyndigheten snittpris är cirka 1.6 kr för 2019): <strong><span id="value3">1</span></strong> kr/kWh. </span>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="range" min="0" max="2.5" value="0" step="0.01" class="slider" id="slider3" />
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="col-md-9">
+                            <span>4. Takets skuggning (utan skuggning sjunker dina materialkostnader): <strong><span id="value4">Förekommer</span></strong></span>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="range" min="1" max="2" value="0" class="slider" id="slider4"/>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="col-md-9">
+                            <span>5. Husets ungefärliga värdering (cirka 10-14% husvärdeökning): <strong><span id="value5">1</span></strong> SEK.</span>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="range" min="1" max="10000000" value="1" class="slider" id="slider5"/>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="col-md-9">
+                            <span>6. De investerade pengarnas ränta (vid husbelåning, privatlån, sollån på ca 12 år) : <strong><span id="value6">4</span></strong> % i ränta.</span>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="range" min="0" max="6" value="0" step="0.1" class="slider" id="slider6"/>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="col-md-9">
+                            <span>7. Lånets löptid : <strong><span id="value7">0</span></strong> år.</span>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="range" min="0" max="12" value="0" step="1" class="slider" id="slider7"/>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Result -->
+                <div class="resultContainer" id="resultSplit">
+
+                    <div class="col-right">
+                    <h1 class="result-headline">Sammanfattning: </h1>
+
+                        <div class="result result-price">
+
+                            <p class="result-item">
+                                <strong class="heading-2">
+                                    <span class="heading-2"" id="yearlySaving">0</span> SEK
+                                </strong>
+                                <span class="heading-2">Intjänat/besparat per år</span>
+                            </p>
+                            <p class="result-item">
+                                <strong class="heading-2">
+                                    <span class="heading-2" id="monthlySaving">0</span> SEK
+                                </strong>
+                                <span class="heading-2">Intjänat/besparat per månad</span>
+                            </p>
+                            <p class="result-item">
+                                <strong class="heading-2">
+                                    
+                                    <span class="heading-2" id="paybackTime">0</span> år
+                                </strong>
+                                <span class="heading-2">Återbetalningstid</span>
+                            </p>
+                            <p class="result-item">
+                                <strong class="heading-2">
+                                    <span class="heading-2" id="resultsROI">0</span> %
+                                </strong>
+                                <span class="heading-2">Avkastning</span>
+                            </p>
+                            <p class="result-item">
+                                <strong class="heading-2">
+                                    <span class="heading-2" id="loanCost">0</span> SEK 
+                                </strong>
+                                <span class="heading-2">Ca. månadskostnad för lån</span>
+                            </p>
+                            <p class="result-item">
+                                <strong class="heading-2">
+                                    <span class="heading-2" id="monthlyNet">0</span> SEK 
+                                </strong>
+                                <span class="heading-2">Månadsnetto</span>
+                            </p>
+                            <p class="result-item">
+                                <strong class="heading-2">
+                                    <span class="heading-2" id="valueIncrease">0</span> SEK 
+                                </strong>
+                                <span class="heading-2">Uppskattad husvärdeökning</span>
+                            </p>
+                        </div>
+
+                        <div class="pdf">
+                            <img src="https://16iww818esurj9dm316uitwf-wpengine.netdna-ssl.com/wp-content/uploads/2016/10/1475270966_basic1-046_file_pdf.png"
+                                alt="" />
+                            <h4>Download your savings results</h4>
+                            <p>When you’re finished calculating, save and share the good news about how much time and
+                                money
+                                this can save your business.</p>
+                            <button type="button" class="btn btn-warning">DOWNLOAD YOUR RESULTS</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js" type=""></script>
+
+</body>
+
+</html>
