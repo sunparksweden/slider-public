@@ -7,7 +7,7 @@ body {
 }
 
 .row-item-content {
-    font-family: Montserrat, "Open Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
 }
 
@@ -112,7 +112,7 @@ input#slider1, #slider2, #slider3, #slider4, #slider5, #slider6, #slider7 {
 }
 
 .result-price p strong {
-    font-family: Montserrat, "Open Sans"; 
+    font-family: "Open Sans", sans-serif; 
   display: block;
   font-size: 45px;
   color : #f8f8f8;
@@ -134,7 +134,7 @@ input#slider1, #slider2, #slider3, #slider4, #slider5, #slider6, #slider7 {
 }
 
 .result-item {
-    font-family: Montserrat, "Open Sans"; 
+    font-family: "Open Sans", sans-serif;
   background-color: rgb(255, 208, 20);
   border-radius: 5px;
   padding: 30px;
@@ -197,6 +197,7 @@ span.bottom{
     padding: 5px 0 0 17px;
 }
 .pdf p {
+    font-family: "Open Sans", sans-serif;
     margin-bottom: 20px;
     font-weight: 300;
 }
