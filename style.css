@@ -6,10 +6,9 @@ body {
     background-color: #fff;
 }
 
-.result-rows {
-    font-family: "Open Sans", sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
+.row-item-content {
+    font-family: Montserrat, sans-serif;
+    text-transform: uppercase;
 }
 
 .saving-calculator {
