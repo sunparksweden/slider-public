@@ -112,6 +112,7 @@ input#slider1, #slider2, #slider3, #slider4, #slider5, #slider6, #slider7 {
 }
 
 .result-price p strong {
+    fony-family: Montserrat, "Open Sans"; 
   display: block;
   font-size: 45px;
   color : #f8f8f8;
