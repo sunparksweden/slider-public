@@ -16,7 +16,7 @@ body {
     position: absolute;
     align-items: center;
 }
-.container {
+.slider-container {
     width: auto;
     align-items: center;
     padding: 30px;
