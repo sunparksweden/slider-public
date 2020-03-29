@@ -1,0 +1,155 @@
+
+
+
+.grid-master {
+    font-family: "Segoe UI";
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-box-heading {
+    margin: 0px;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.tables-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.table-headers {
+    padding: 10px;
+}
+
+
+.table-cell {
+    padding: 5px;
+    border-radius: 10%;
+}
+
+
+.show-table-button{
+    font-family: "Segoe UI";
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    background-color: rgb(255, 208, 20);
+    padding: 15px 20px 15px 20px;
+    border-radius: 5%;
+    border: none;
+}
+
+.grid-item {
+    background-color: rgb(248, 248, 248);
+    padding: 30px;
+    margin: 20px;
+}
+
+.summary-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+body {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #666;
+    background-color: #fff;
+}
+
+.row{
+    display: flex;
+    padding: 30px;
+}
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: auto; /* Full-width */
+    height: 5px; /* Specified height */
+    background: #fff278; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    margin: 15px;
+    margin-top: 25px;
+    
+  }
+
+  .slide {
+      background-color: #ffffff;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    background: rgb(255, 208, 20); /* Sunpark yellow background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 50%;
+    border-color: cornsilk;
+  } 
+
+span.irs-max, .irs-single, .irs-min {
+    display: none;
+}
+
+input#slider1, #slider2, #slider3, #slider4, #slider5, #slider6, #slider7 {
+    width: 80%;
+    height: 5px;
+    text-align: center;
+    /* display: inherit; */
+    border-radius: 3px;
+    border: 1px solid #eeeeee;
+}
+
+
+.result-headline {
+  font-size: 30px;
+  margin-left: 60px;
+}
+
+.result {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 40px; 
+  padding-left: 0px;
+  padding-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: #3d3d3d;
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.row-item-value {
+    font-family: "Open Sans";
+    font-size: 30px;
+}
+
+.result-item {
+    display: flex;
+    flex-direction: column;
+width: 70%;
+  background-color: rgb(255, 208, 20);
+  border-radius: 5px;
+  padding: 10px 10px 10px 20px;
+  margin: 15px;
+}
