@@ -4,162 +4,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <LINK href="style.css" rel="stylesheet" type="text/css">
+    <title>Calculator Grid</title>
+
+    <LINK href="https://cdn.jsdelivr.net/gh/sunparksweden/slider-public@latest/style.css" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
 <body>
-    <section class="saving-calculator">
-        <div class="container">
-            <div class="row">
-
-
-                <!-- Calcutor slide-->
-                <div class="col-left">
-                    <h3 class="cal-title">Kika hur kostnadsläget kan se ut för dig! Dra i reglagen för att anpassa.
-                    </h3>
-
-                    <p>Om huset:</p>
-
-                    <div class="slide">
-                        <div class="col-md-9">
-                            <span>1. Tillgänglig takyta i samma väderstreck (vi utgår ifrån ca. 45 graders
-                                taklutning):  <strong> <span id="value1">1</span> </strong>  kvm.</span>
-                        </div>
-                        <div class="col-md-2">
-                            <input type="range" min="0" max="160" value="1" step="1" class="slider" id="slider1" />
-                            <!-- <p>Antal kvadratmeter: <span id="value1">1</span></p> -->
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <div class="col-md-9">
-                            <span>2. Husets orientering / väderstreck: <strong><span id="value2">Platt</span> </strong> </span>
-                        </div>
-                        <div class="col-md-2">
-                            <input type="range" min="0" max="4" value="0" class="slider" id="slider2" />
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <div class="col-md-9">
-                            <span>3. Kostnad per kWh (Energimyndigheten snittpris är cirka 1.6 kr för 2019): <strong><span id="value3">1</span></strong> kr/kWh. </span>
-                        </div>
-                        <div class="col-md-2">
-                            <input type="range" min="0" max="2.5" value="0" step="0.01" class="slider" id="slider3" />
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <div class="col-md-9">
-                            <span>4. Takets skuggning (utan skuggning sjunker dina materialkostnader): <strong><span id="value4">Förekommer</span></strong></span>
-                        </div>
-                        <div class="col-md-2">
-                            <input type="range" min="1" max="2" value="0" class="slider" id="slider4"/>
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <div class="col-md-9">
-                            <span>5. Husets ungefärliga värdering (cirka 10-14% husvärdeökning): <strong><span id="value5">1</span></strong> SEK.</span>
-                        </div>
-                        <div class="col-md-2">
-                            <input type="range" min="1" max="10000000" value="1" class="slider" id="slider5"/>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="col-md-9">
-                            <span>6. De investerade pengarnas ränta (vid husbelåning, privatlån, sollån på ca 12 år) : <strong><span id="value6">4</span></strong> % i ränta.</span>
-                        </div>
-                        <div class="col-md-2">
-                            <input type="range" min="0" max="6" value="0" step="0.1" class="slider" id="slider6"/>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="col-md-9">
-                            <span>7. Lånets löptid : <strong><span id="value7">0</span></strong> år.</span>
-                        </div>
-                        <div class="col-md-2">
-                            <input type="range" min="0" max="12" value="0" step="1" class="slider" id="slider7"/>
-                        </div>
-                    </div>
-
-
+    <div class="grid-master">
+        <LINK href="https://cdn.jsdelivr.net/gh/sunparksweden/slider-public@latest/style.css" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+        <div class="grid-item grid-item-input">
+            <p class="grid-box-heading">Input</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, a temporibus! Voluptatem
+                provident numquam sunt commodi, labore placeat suscipit accusamus perspiciatis nam illo totam velit
+                expedita laboriosam, ipsam repudiandae illum!</p>
+            <div class="slide">
+                <div class="col-md-9">
+                    <span>Tillgänglig takyta i samma väderstreck (vi utgår ifrån ca. 45 graders
+                        taklutning): <strong> <span id="value1">1</span> </strong> kvm.</span>
                 </div>
-
-                <!-- Result -->
-                <div class="resultContainer" id="resultSplit">
-
-                    <div class="col-right">
-                    <h1 class="result-headline">Sammanfattning: </h1>
-
-                        <div class="result result-price">
-
-                            <p class="result-item">
-                                <strong class="heading-2">
-                                    <span class="heading-2"" id="yearlySaving">0</span> SEK
-                                </strong>
-                                <span class="heading-2">Intjänat/besparat per år</span>
-                            </p>
-                            <p class="result-item">
-                                <strong class="heading-2">
-                                    <span class="heading-2" id="monthlySaving">0</span> SEK
-                                </strong>
-                                <span class="heading-2">Intjänat/besparat per månad</span>
-                            </p>
-                            <p class="result-item">
-                                <strong class="heading-2">
-                                    
-                                    <span class="heading-2" id="paybackTime">0</span> år
-                                </strong>
-                                <span class="heading-2">Återbetalningstid</span>
-                            </p>
-                            <p class="result-item">
-                                <strong class="heading-2">
-                                    <span class="heading-2" id="resultsROI">0</span> %
-                                </strong>
-                                <span class="heading-2">Avkastning</span>
-                            </p>
-                            <p class="result-item">
-                                <strong class="heading-2">
-                                    <span class="heading-2" id="loanCost">0</span> SEK 
-                                </strong>
-                                <span class="heading-2">Ca. månadskostnad för lån</span>
-                            </p>
-                            <p class="result-item">
-                                <strong class="heading-2">
-                                    <span class="heading-2" id="monthlyNet">0</span> SEK 
-                                </strong>
-                                <span class="heading-2">Månadsnetto</span>
-                            </p>
-                            <p class="result-item">
-                                <strong class="heading-2">
-                                    <span class="heading-2" id="valueIncrease">0</span> SEK 
-                                </strong>
-                                <span class="heading-2">Uppskattad husvärdeökning</span>
-                            </p>
-                        </div>
-
-                        <div class="pdf">
-                            <img src="https://16iww818esurj9dm316uitwf-wpengine.netdna-ssl.com/wp-content/uploads/2016/10/1475270966_basic1-046_file_pdf.png"
-                                alt="" />
-                            <h4>Download your savings results</h4>
-                            <p>When you’re finished calculating, save and share the good news about how much time and
-                                money
-                                this can save your business.</p>
-                            <button type="button" class="btn btn-warning">DOWNLOAD YOUR RESULTS</button>
-                        </div>
-                    </div>
-
+                <div class="col-md-2">
+                    <input type="range" min="0" max="250" value="1" step="1" class="slider" id="slider1" />
                 </div>
+            </div>
 
+            <div class="slide">
+                <div class="col-md-9">
+                    <span>Husets orientering / väderstreck: <strong><span id="value2">Platt</span> </strong> </span>
+                </div>
+                <div class="col-md-2">
+                    <input type="range" min="0" max="4" value="0" class="slider" id="slider2" />
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="col-md-9">
+                    <span>Kostnad per kWh (Energimyndigheten snittpris är cirka 1.6 kr för 2019): <strong><span
+                                id="value3">1.6</span></strong> kr/kWh. </span>
+                </div>
+                <div class="col-md-2">
+                    <input type="range" min="0" max="2.5" value="1.6" step="0.01" class="slider" id="slider3" />
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="col-md-9">
+                    <span>Husets ungefärliga värdering (cirka 10-14% husvärdeökning): <strong><span
+                                id="value5">1</span></strong> SEK.</span>
+                </div>
+                <div class="col-md-2">
+                    <input type="range" min="1" max="10000000" value="1" class="slider" id="slider5" />
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="col-md-9">
+                    <span>De investerade pengarnas ränta (vid husbelåning, privatlån, sollån på ca 12 år) :
+                        <strong><span id="value6">4</span></strong> % i ränta.</span>
+                </div>
+                <div class="col-md-2">
+                    <input type="range" min="0" max="6" value="0" step="0.1" class="slider" id="slider6" />
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="col-md-9">
+                    <span>Lånets löptid : <strong><span id="value7">12</span></strong> år.</span>
+                </div>
+                <div class="col-md-2">
+                    <input type="range" min="0" max="12" value="12" step="1" class="slider" id="slider7" />
+                </div>
+            </div>
+
+        </div>
+        <div class="grid-item grid-item-summary">
+            <p class="grid-box-heading">Sammanfattning</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deserunt et in, hic laboriosam quia
+                consectetur consequuntur explicabo architecto molestias itaque incidunt cum eaque perferendis sequi
+                totam natus autem mollitia.</p>
+            <div class="summary-columns">
+                <div class="summary-column-left">
+                    <h3>Direktköp</h3>
+                    <div class="grid-summary-purchase">
+
+
+                        <!-- input all summary content here -->
+                        <p class="result-item">
+                            <strong class="row-item-value">
+                                <span class="row-item-content" id="totalProjectPrice">0</span> SEK
+                            </strong>
+                            <span class="row-item-content">Uppskattad totalkostnad</span>
+                        </p>
+                        <p class="result-item">
+                            <strong class="row-item-value">
+                                <span class="row-item-content" id="yearlySavings">0</span> SEK
+                            </strong>
+                            <span class="row-item-content">Intjänat/besparat per år</span>
+                        </p>
+                        <p class="result-item">
+                            <strong class="row-item-value">
+                                <span class="row-item-content" id="monthlySavings">0</span> SEK
+                            </strong>
+                            <span class="row-item-content">Intjänat/besparat per månad</span>
+                        </p>
+                        <p class="result-item">
+                            <strong class="row-item-value">
+
+                                <span class="row-item-content" id="paybackTime">0</span> år
+                            </strong>
+                            <span class="row-item-content">Återbetalningstid</span>
+                        </p>
+                        <p class="result-item">
+                            <strong class="row-item-value">
+                                <span class="row-item-content" id="percentageROI">0</span> %
+                            </strong>
+                            <span class="row-item-content">Avkastning</span>
+                        </p>
+
+                        <p class="result-item">
+                            <strong class="row-item-value">
+                                <span class="row-item-content" id="valueIncrease">0</span> SEK
+                            </strong>
+                            <span class="row-item-content">Uppskattad husvärdeökning</span>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="summary-column-right">
+                    <h3>Vid lån</h3>
+                    <div class="grid-summary-loan">
+                        <!-- input all summary content here -->
+                        <p class="result-item">
+                            <strong class="row-item-value">
+                                <span class="row-item-content" id="monthlyLoanCost">0</span> SEK
+                            </strong>
+                            <span class="row-item-content">Ca. månadskostnad för lån</span>
+                        </p>
+
+                        <p class="result-item">
+                            <strong class="row-item-value">
+                                <span class="row-item-content" id="monthlySaving2">0</span> SEK
+                            </strong>
+                            <span class="row-item-content">Intjänat/besparat per månad</span>
+                        </p>
+
+                        <p class="result-item">
+                            <strong class="row-item-value">
+                                <span class="row-item-content" id="monthlyNet">0</span> SEK
+                            </strong>
+                            <span class="row-item-content">Månadsnetto</span>
+                        </p>
+
+                        <p class="result-item">
+                            <strong class="row-item-value">
+                                <span class="row-item-content" id="loanTotalCost">0</span> SEK
+                            </strong>
+                            <span class="row-item-content">Kostnad eller intäkt under lånets löptid</span>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="grid-item grid-item-tables" id="tables">
+            <p class="grid-box-heading">Tabeller</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta nisi provident enim voluptatum. Quos
+                voluptate magnam, non, ipsam mollitia beatae nobis inventore voluptatum laborum nostrum nihil quisquam
+                provident, culpa veritatis!</p>
+            <button class="show-table-button" id="show-button">Visa/uppdatera tabeller</button>
+            <div class="tables-columns">
+                <div class="tables-column-left">
+                    <h3>Direktköp</h3>
+                    <table class="table-purchase">
+                        <tr>
+                            <th class="table-headers">År</th>
+                            <th class="table-headers">Årets intjänat</th>
+                            <th class="table-headers">Ack intjänat</th>
+                            <th class="table-headers">Total</th>
+                        </tr>
+
+                        <tbody id="table-purchase-content">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tables-column-right">
+                    <h3>Vid lån</h3>
+                    <table class="table-loan">
+                        <tr>
+                            <th class="table-headers">År</th>
+                            <th class="table-headers">Lånkostnad</th>
+                            <th class="table-headers">Intjänat</th>
+                            <th class="table-headers">Netto</th>
+                            <th class="table-headers">Total</th>
+                        </tr>
+
+                        <tbody id="table-loan-content">
+
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </section>
 
-    <script src="script.js" type=""></script>
+        <div class="grid-item grid-item-graphs">
+            <p class="grid-box-heading">Grafer</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, molestiae dignissimos! Fugit,
+                voluptatum necessitatibus accusantium, sapiente rerum esse quasi quis vitae quae unde, dolores sint.
+                Aliquam, placeat tempore! Sit, laudantium?</p>
+            <canvas id="myChart"></canvas>
+        </div>
 
+        <script src="https://cdn.jsdelivr.net/gh/sunparksweden/slider-public@latest/script.js"type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+        <script src="script.js" type="text/javascript"></script>
+    </div>
 </body>
 
 </html>
