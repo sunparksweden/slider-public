@@ -132,11 +132,11 @@ var input = slider4.value;
 document.getElementById('value4').innerHTML = input;
 
 if (input == 1) {
-    shadowCoefficient = 1
-    document.getElementById('value4').innerHTML = "Förekommer"
+shadowCoefficient = 1
+document.getElementById('value4').innerHTML = "Förekommer"
 } else if (input == 2) {
-    shadowCoefficient = 0.9
-    document.getElementById('value4').innerHTML = "Ingen skuggning"
+shadowCoefficient = 0.9
+document.getElementById('value4').innerHTML = "Ingen skuggning"
 } else {
 }
 
@@ -309,7 +309,7 @@ function generatePurchaseTables() {
         this.ackIntjänat = c;
         this.total = d;
     }
-    for (var i = 1; i <= paybackTime + 1 ; i++) {
+    for (var i = 1; i <= paybackTime + 1; i++) {
 
         var object = new PurchaseObject(
             i,
@@ -336,7 +336,7 @@ function generateLoanTables() {
 
             var object = new LoanObject(
                 i,
-                Math.round(i * monthlyLoanCost * 12 ),
+                Math.round(i * monthlyLoanCost * 12),
                 i * yearlySavings,
                 Math.round(monthlyNet * 12),
                 Math.round(i * monthlyNet * 12));
@@ -351,14 +351,14 @@ function generateLoanTables() {
 
 function displayLoanTable(data) {
 
-    for (var i = 0; i < data.length ; i++) {
+    for (var i = 0; i < data.length; i++) {
         var row = `<tr>
-                        <td class="table-cell" style="text-align: center;">${loanTableArray[i].månad} </td>
-                        <td class="table-cell" style="text-align: center;">${loanTableArray[i].lånkostnad}  </td>
-                        <td class="table-cell" style="text-align: center;">${loanTableArray[i].intjänat}  </td>
-                        <td class="table-cell" style="text-align: center;">${loanTableArray[i].netto}  </td>
-                        <td class="table-cell" style="text-align: right;">${loanTableArray[i].total} SEK </td>
-                    </tr>`
+                    <td class="table-cell" style="text-align: center;">${loanTableArray[i].månad} </td>
+                    <td class="table-cell" style="text-align: center;">${loanTableArray[i].lånkostnad}  </td>
+                    <td class="table-cell" style="text-align: center;">${loanTableArray[i].intjänat}  </td>
+                    <td class="table-cell" style="text-align: center;">${loanTableArray[i].netto}  </td>
+                    <td class="table-cell" style="text-align: right;">${loanTableArray[i].total} SEK </td>
+                </tr>`
         document.getElementById('table-loan-content').innerHTML += row
     }
 }
@@ -367,11 +367,11 @@ function displayPurchaseTable(data) {
 
     for (var i = 0; i < paybackTime; i++) {
         var row = `<tr>
-                        <td class="table-cell" style="text-align: center;">${purchaseTableArray[i].år} </td>
-                        <td class="table-cell" style="text-align: center;">${purchaseTableArray[i].intjänatÅr}  </td>
-                        <td class="table-cell" style="text-align: center;">${purchaseTableArray[i].ackIntjänat}  </td>
-                        <td class="table-cell" style="text-align: right;">${purchaseTableArray[i].total} SEK </td>
-                    </tr>`
+                    <td class="table-cell" style="text-align: center;">${purchaseTableArray[i].år} </td>
+                    <td class="table-cell" style="text-align: center;">${purchaseTableArray[i].intjänatÅr}  </td>
+                    <td class="table-cell" style="text-align: center;">${purchaseTableArray[i].ackIntjänat}  </td>
+                    <td class="table-cell" style="text-align: right;">${purchaseTableArray[i].total} SEK </td>
+                </tr>`
         document.getElementById('table-purchase-content').innerHTML += row
     }
 }
@@ -398,10 +398,10 @@ function generateDataArrays() {
 
         if (i < loanPeriod) {
             loanDataArray.push(i * monthlyNet * 12)
-            console.log (i)
+            console.log(i)
         } else {
             loanDataArray.push(loanPeriod * monthlyNet * 12 + (i - loanPeriod) * yearlySavings)
-            console.log (i - loanPeriod)
+            console.log(i - loanPeriod)
         }
 
     }
@@ -494,4 +494,3 @@ console.log('monthlyLoanCost = ' + monthlyLoanCost)
 
 
 */
-
