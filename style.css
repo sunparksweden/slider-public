@@ -9,6 +9,7 @@
 }
 
 .grid-box-heading {
+    text-align: left;
     font-family: "Open Sans";
     margin: 20px;
     font-size: 40px;
@@ -30,14 +31,21 @@
     border-radius: 10%;
 }
 
+.paragraph-text {
+    font-family: "Open Sans";
+    text-align: left;
+}
+
 
 .show-table-button{
+    cursor: pointer;
     font-family: "Segoe UI";
     font-size: 16px;
     font-weight: 600;
     color: black;
     background-color: rgb(255, 208, 20);
     padding: 15px 20px 15px 20px;
+    margin: 20px;
     border-radius: 5%;
     border: none;
 }
@@ -146,11 +154,13 @@ input#slider1, #slider2, #slider3, #slider4, #slider5, #slider6, #slider7 {
 }
 
 .result-item {
+    font-family: "Open Sans";
+    text-align: left;
     display: flex;
     flex-direction: column;
-width: 70%;
-  background-color: rgb(255, 208, 20);
-  border-radius: 5px;
-  padding: 10px 10px 10px 20px;
-  margin: 15px;
+    width: 70%;
+    background-color: rgb(255, 208, 20);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 15px;
 }
