@@ -90,6 +90,8 @@ body {
   }
 
   .slide {
+      display: flex;
+      flex-direction: column;
       background-color: #ffffff;
       padding: 10px;
       margin: 10px;
