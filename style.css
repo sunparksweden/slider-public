@@ -11,10 +11,18 @@
 .grid-box-heading {
     text-align: left;
     font-family: "Open Sans";
-    margin: 20px;
+    margin: 20px 20px 20px 0px;
     font-size: 40px;
     font-weight: 800;
 }
+
+.category-headline {
+    font-family: "Open Sans";
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}   
 
 .tables-columns {
     display: grid;
@@ -34,6 +42,7 @@
 .paragraph-text {
     font-family: "Open Sans";
     text-align: left;
+    margin: 20px 20px 20px 0px;
 }
 
 
@@ -155,6 +164,10 @@ input#slider1, #slider2, #slider3, #slider4, #slider5, #slider6, #slider7 {
     font-size: 30px;
 }
 
+.row-item-content {
+    font-size: 12px;
+}
+
 .result-item {
     font-family: "Open Sans";
     text-align: left;
@@ -163,6 +176,6 @@ input#slider1, #slider2, #slider3, #slider4, #slider5, #slider6, #slider7 {
     width: 70%;
     background-color: rgb(255, 208, 20);
     border-radius: 5px;
-    padding: 20px;
+    padding: 10px;
     margin: 15px;
 }
