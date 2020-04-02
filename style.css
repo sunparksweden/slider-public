@@ -99,6 +99,7 @@ body {
   }
 
   .slide {
+      text-align: left;
       display: flex;
       flex-direction: column;
       background-color: #ffffff;
@@ -166,6 +167,7 @@ input#slider1, #slider2, #slider3, #slider4, #slider5, #slider6, #slider7 {
 
 .row-item-content {
     font-size: 12px;
+    margin-top: 10px;
 }
 
 .result-item {
@@ -176,6 +178,6 @@ input#slider1, #slider2, #slider3, #slider4, #slider5, #slider6, #slider7 {
     width: 70%;
     background-color: rgb(255, 208, 20);
     border-radius: 5px;
-    padding: 10px;
+    padding: 15px;
     margin: 15px;
 }
