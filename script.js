@@ -43,7 +43,7 @@ interestRate = 4,
     houseValue = 1,
     houseValueIncrease = 1,
     totalProjectPrice = 1,
-    avgPricePerSQM = 2178 //2500; // 2176 rough estimate, 2500 as sad case
+    avgPricePerSQM = 2350 //2500; // 2176 rough estimate, 2500 as sad case
 
 
 sunRadiance = 950;
