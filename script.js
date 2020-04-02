@@ -418,39 +418,40 @@ function buildGraphs() {
         type: 'line',
         data: {
             labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
-            datasets: [{
-                label: 'Direktköp',
-                data: purchaseDataArray,
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.5)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)'
-                ],
-                borderWidth: 1
-            },
-            {
-                label: 'Direktköp m. husvärdeökning',
-                data: withValueIncreaseDataArray,
-                backgroundColor: [
-                    'rgba(200, 150, 132, 0.5)'
-                ],
-                borderColor: [
-                    'rgba(200, 150, 132, 1)'
-                ],
-                borderWidth: 1
-            },
-            {
-                label: 'Vid Lån',
-                data: loanDataArray,
-                backgroundColor: [
-                    'rgba(156, 99, 132, 0.5)'
-                ],
-                borderColor: [
-                    'rgba(156, 99, 132, 1)'
-                ],
-                borderWidth: 1
-            }]
+            datasets: [
+                {
+                    label: 'Vid Lån',
+                    data: loanDataArray,
+                    backgroundColor: [
+                        'rgba(255,215,0, 0.6)'
+                    ],
+                    borderColor: [ 
+                        'rgba(0,144,255, 1)'
+                    ],
+                    borderWidth: 1
+                },
+                {
+                    label: 'Direktköp',
+                    data: purchaseDataArray,
+                    backgroundColor: [
+                        'rgba(127,255,212, 0.5)'
+                    ],
+                    borderColor: [
+                        'rgba(0,144,255, 1)'
+                    ],
+                    borderWidth: 1
+                },
+                {
+                    label: 'Direktköp m. husvärdeökning',
+                    data: withValueIncreaseDataArray,
+                    backgroundColor: [
+                        'rgba(30,144,255, 0.5)'
+                    ],
+                    borderColor: [
+                        'rgba(0,144,255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
         },
         options: {
             scales: {
