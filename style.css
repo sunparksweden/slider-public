@@ -18,6 +18,8 @@
 
 .category-headline {
     font-family: "Open Sans";
+    font-size: 15;
+    font-weight: 500;
     text-align: left;
     display: flex;
     flex-direction: column;
